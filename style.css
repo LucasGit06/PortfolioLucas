@@ -1,0 +1,677 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* SCROLL SUAVE */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== TEMA CLARO (PADRÃO) ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* NAV */
+nav {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 {
+  font-size: 24px;
+}
+
+/* MENU ESQUERDA */
+.menu-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* BOTÕES */
+#menuToggle,
+.tema-btn {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* MENU LATERAL */
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  padding: 80px 20px 20px;
+
+  transform: translateX(-100%);
+  transition: 0.3s ease;
+
+  list-style: none;
+  z-index: 1000;
+
+  box-shadow: 5px 0 20px rgba(0,0,0,0.2);
+}
+
+#menu.show {
+  transform: translateX(0);
+}
+
+/* LINKS MENU */
+#menu li {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+#menu a {
+  display: block;
+  padding: 15px 5px;
+  color: #0f172a;
+  text-decoration: none;
+  position: relative;
+}
+
+#menu a:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+#menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0%;
+  height: 2px;
+  background: #0f172a;
+  transition: 0.3s;
+}
+
+#menu a:hover::after {
+  width: 100%;
+}
+
+/* SEÇÕES */
+section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* TÍTULOS */
+section h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* CARDS */
+.card,
+.card-gray {
+  background: #ffffff;
+  padding: 35px;
+  margin: 30px auto;
+  border-radius: 14px;
+  max-width: 700px;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* TEXTO */
+.card p,
+.card-gray p,
+li {
+  font-size: 17px;
+}
+
+/* BOTÕES */
+.botoes {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* BOTÃO PRINCIPAL */
+.btn {
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 10px #22c55e;
+}
+
+/* BOTÃO BORDA */
+.btn-outline {
+  padding: 12px 18px;
+  border: 2px solid #0f172a;
+  color: #0f172a;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: #0f172a;
+  color: white;
+}
+
+/* CARROSSEL */
+.carousel {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin: 30px auto;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 15px;
+  animation: scroll 20s linear infinite;
+}
+
+.carousel:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+.carousel img {
+  width: 320px;
+  height: 200px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.carousel img:hover {
+  transform: scale(1.05);
+}
+
+/* ANIMAÇÃO */
+@keyframes scroll {
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* CONTATO */
+#contato {
+  background: #f1f5f9;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* FORM */
+#contato form {
+  max-width: 450px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CAMPOS */
+#contato input,
+#contato textarea {
+  background: #ffffff;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+/* FOCO */
+#contato input:focus,
+#contato textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #22c55e;
+}
+
+/* BOTÃO */
+#contato button {
+  padding: 12px;
+  background: #111827;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#contato button:hover {
+  background: #374151;
+}
+
+/* STATUS */
+#status {
+  margin-top: 10px;
+}
+
+/* ===== MODO ESCURO REAL ===== */
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* SCROLL SUAVE */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== TEMA CLARO (PADRÃO) ===== */
+body {
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* NAV */
+nav {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h2 {
+  font-size: 24px;
+}
+
+/* MENU ESQUERDA */
+.menu-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* BOTÕES */
+#menuToggle,
+.tema-btn {
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* MENU LATERAL */
+#menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  background: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  padding: 80px 20px 20px;
+
+  transform: translateX(-100%);
+  transition: 0.3s ease;
+
+  list-style: none;
+  z-index: 1000;
+
+  box-shadow: 5px 0 20px rgba(0,0,0,0.2);
+}
+
+#menu.show {
+  transform: translateX(0);
+}
+
+/* LINKS MENU */
+#menu li {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+#menu a {
+  display: block;
+  padding: 15px 5px;
+  color: #0f172a;
+  text-decoration: none;
+  position: relative;
+}
+
+#menu a:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+#menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 0%;
+  height: 2px;
+  background: #0f172a;
+  transition: 0.3s;
+}
+
+#menu a:hover::after {
+  width: 100%;
+}
+
+/* SEÇÕES */
+section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+/* TÍTULOS */
+section h1 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* CARDS */
+.card,
+.card-gray {
+  background: #ffffff;
+  padding: 35px;
+  margin: 30px auto;
+  border-radius: 14px;
+  max-width: 700px;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* TEXTO */
+.card p,
+.card-gray p,
+li {
+  font-size: 17px;
+}
+
+/* BOTÕES */
+.botoes {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* BOTÃO PRINCIPAL */
+.btn {
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 10px #22c55e;
+}
+
+/* BOTÃO BORDA */
+.btn-outline {
+  padding: 12px 18px;
+  border: 2px solid #0f172a;
+  color: #0f172a;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: #0f172a;
+  color: white;
+}
+
+/* CARROSSEL */
+.carousel {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin: 30px auto;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 15px;
+  animation: scroll 20s linear infinite;
+}
+
+.carousel:hover .carousel-track {
+  animation-play-state: paused;
+}
+
+.carousel img {
+  width: 320px;
+  height: 200px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.carousel img:hover {
+  transform: scale(1.05);
+}
+
+/* ANIMAÇÃO */
+@keyframes scroll {
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* CONTATO */
+#contato {
+  background: #f1f5f9;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* FORM */
+#contato form {
+  max-width: 450px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* CAMPOS */
+#contato input,
+#contato textarea {
+  background: #ffffff;
+  color: black;
+  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+}
+
+/* FOCO */
+#contato input:focus,
+#contato textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #22c55e;
+}
+
+/* BOTÃO */
+#contato button {
+  padding: 12px;
+  background: #111827;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#contato button:hover {
+  background: #374151;
+}
+
+/* STATUS */
+#status {
+  margin-top: 10px;
+}
+
+/* ===== MODO ESCURO (PRETO/CINZA/BRANCO) ===== */
+.dark {
+  background: #000000; /* preto puro */
+  color: #e5e5e5; /* branco suave */
+}
+
+/* NAV */
+.dark nav {
+  background: #0a0a0a;
+  border-bottom: 1px solid #222;
+  box-shadow: none;
+}
+
+/* MENU */
+.dark #menu {
+  background: #0a0a0a;
+}
+
+.dark #menu li {
+  border-bottom: 1px solid #222;
+}
+
+.dark #menu a {
+  color: #e5e5e5;
+}
+
+.dark #menu a:hover {
+  background: #111;
+}
+
+.dark #menu a::after {
+  background: #ffffff; /* linha branca */
+}
+
+/* CARDS */
+.dark .card,
+.dark .card-gray {
+  background: #111111;
+  color: #e5e5e5;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+}
+
+/* HOVER CARD */
+.dark .card:hover {
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+/* BOTÕES */
+.dark .btn {
+  background: #ffffff;
+  color: #000000;
+}
+
+.dark .btn:hover {
+  background: #e5e5e5;
+  box-shadow: none;
+}
+
+.dark .btn-outline {
+  border: 2px solid #e5e5e5;
+  color: #e5e5e5;
+}
+
+.dark .btn-outline:hover {
+  background: #e5e5e5;
+  color: #000000;
+}
+
+/* CONTATO */
+.dark #contato {
+  background: #0a0a0a;
+}
+
+/* INPUTS */
+.dark #contato input,
+.dark #contato textarea {
+  background: #111;
+  color: #ffffff;
+  border: 1px solid #333;
+}
+
+/* FOCO */
+.dark #contato input:focus,
+.dark #contato textarea:focus {
+  box-shadow: 0 0 0 2px #ffffff;
+}
+
+/* BOTÃO FORM */
+.dark #contato button {
+  background: #ffffff;
+  color: #000000;
+}
+
+.dark #contato button:hover {
+  background: #d4d4d4;
+}

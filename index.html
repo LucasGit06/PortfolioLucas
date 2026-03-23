@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfólio - Lucas</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonte moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-container">
+    
+    <div class="menu-left">
+      <h2>Portfólio Lucas</h2>
+      <button id="menuToggle">☰</button>
+       <button id="temaBtn" class="tema-btn">🌞</button>
+
+  <ul id="menu">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#formacao">Formação</a></li>
+    <li><a href="#portfolio">Portfólio</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</nav>
+
+<!-- CONTEÚDO -->
+<main class="container">
+
+  <!-- SOBRE -->
+  <section id="sobre">
+    <h1>Sobre mim</h1>
+    <div class="card">
+      <p>
+        Estudo Análise e Desenvolvimento de Sistemas, com interesse em tecnologia e programação.
+        Tenho conhecimentos em JavaScript e Python, e estou sempre buscando evoluir minhas habilidades.
+        Caso tenha interesse pelo meu perfil, entre em contato ao final da página.
+      </p>
+      <p>Meus Hobbies:</p>
+<ul>
+  <li>💻 Programação</li>
+  <li>🎹 Tocar teclado e ouvir música</li>
+  <li>📈 Ver vídeos sobre tecnologia/engenharia</li>
+</ul>
+    </div>
+  <!-- FORMAÇÃO -->
+  <section id="formacao">
+    <h1>Formação</h1>
+    <div class="card">
+      <p>Análise em Desenvolvimento de Sistemas - Cursando</p>
+    </div>
+  </section>
+
+ 
+
+  <!-- PORTFÓLIO -->
+  <section id="portfolio">
+    <h1>Portfólio</h1>
+
+    <div class="card">
+      <h2>Projeto Html</h2>
+      <p>Projeto acadêmico de um portfólio simples.</p>
+
+      <div class="carousel">
+        <div class="carousel-track">
+          <img src="img/htmltrabalhocss.png" alt="css portfolio">
+          <img src="img/htmltrabalhojs.png" alt="js portfolio">
+          <img src="img/htmltrabalhohtml.png" alt="html portfolio">
+          <img src="img/htmltrabalhocss.png" alt="css portfolio">
+          <img src="img/htmltrabalhojs.png" alt="js portfolio">
+          <img src="img/htmltrabalhohtml.png" alt="html portfolio">
+          <img src="img/htmltrabalhocss.png" alt="css portfolio">
+          <img src="img/htmltrabalhojs.png" alt="js portfolio">
+          <img src="img/htmltrabalhohtml.png" alt="html portfolio">
+        </div>
+      </div>
+
+      <div class="botoes">
+        <a href="https://github.com/LucasGit06/trabalhofdsuninter" target="_blank" class="btn">
+          GitHub
+        </a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <h1>Contato</h1>
+
+    <form id="formContato">
+      <input type="text" id="nome" placeholder="Nome" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <textarea id="mensagem" placeholder="Mensagem" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+
+    <p id="status"></p>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
